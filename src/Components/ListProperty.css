@@ -1,0 +1,344 @@
+.MainForListProperty {
+  background-color: #f7f7f9;
+}
+.radio-groups {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.radio-button {
+  border: 1px solid #ccc;
+  padding: 6px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.radio-button:hover {
+  background-color: #f0f0f0;
+}
+.radio-button.selected {
+  background-color: #287dfd15;
+  border: 1px solid #287dfd;
+}
+
+#formBox {
+  border-radius: 1rem;
+  padding: 30px 30px;
+  height: max-content;
+  background-color: #fff;
+}
+.MiddleHeading {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #091e42;
+}
+#step2 {
+  margin: 30px 5rem;
+  background-color: #f7f7f9;
+}
+#middle {
+  margin: 0px 30px;
+}
+#backDiv {
+  color: #0000006b;
+  font-size: small;
+}
+#progressBar {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 15px;
+  height: max-content;
+}
+#needHelp {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 15px;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contactSection {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 40px 15px;
+  height: 100vh;
+}
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  #step2 {
+    width: 50vw;
+    margin-left: 25vw;
+  }
+  #progressBar {
+    display: none;
+  }
+  #needHelp {
+    display: none;
+  }
+  #contactSection {
+    display: none;
+    width: 0 !important;
+  }
+  .radio-button {
+    display: flex;
+    justify-content: center;
+  }
+  .checkbox-button {
+    display: flex;
+  }
+  #middle {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #progressBar {
+    display: none;
+  }
+  #needHelp {
+    display: none;
+  }
+  #contactSection {
+    display: none;
+    width: 0 !important;
+  }
+  #step2 {
+    width: 80vw;
+    margin-left: 5vw;
+  }
+  #labelforMobileView{
+    font-size: 14px !important;
+  }
+  .radio-button {
+    display: flex;
+    justify-content: center;
+    padding: 3px 10px;
+    font-size: 14px;
+  }
+  .checkbox-button {
+    flex-basis: 100% !important;
+    margin: 0 !important;
+  }
+  #middle {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .MiddleHeading {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .checkbox-label {
+    padding: 0px !important;
+    font-size: 13px;
+  }
+  .addressBox{
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .margin-demo {
+    margin-left: 15%;
+  }
+  .margin-demo1 {
+    margin-left: 15%;
+  }
+  .ButtonBox{
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+.margin-demo1 {
+  margin-left: 5%;
+}
+.ButtonBox{
+  display: flex;
+  justify-content: flex-start;
+}
+.step-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative; /* Add position:relative */
+}
+.step {
+  display: flex;
+  align-items: center;
+  margin: 0px 0;
+  position: relative;
+  color: #000000a2;
+}
+.step-number {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-weight: normal;
+}
+.step.active {
+  color: #000;
+  font-weight: 500;
+}
+/* .step.completed{
+    color: #000000b1;
+} */
+.step-number.completed {
+  font-size: 9px;
+  font-weight: 900;
+  color: #ccc;
+  background-color: #007bff;
+  border: none;
+}
+.step-number.active {
+  content: "";
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  box-shadow: inset 0 0 0 2px #ccc;
+}
+
+.connectors {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.connector {
+  width: 2px;
+  height: 50px;
+  background-color: #ccc;
+  margin: 0 9px;
+}
+.connector.completed {
+  background-color: #287dfd58;
+}
+
+.radio-label {
+  position: relative;
+  display: inline-block;
+  margin: 0 !important;
+  color: #000000b4;
+}
+
+.radio-label input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0; /* Hide default radio button */
+  width: 0;
+  height: 0;
+}
+
+.radio-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Adjust the size of the custom circle */
+}
+.addressBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.radio-button.selected:before {
+  background-color: #007bff; /* Customize the color for selected state */
+  border-color: #007bff; /* Customize the border color for selected state */
+}
+.checkbox-group {
+  display: contents;
+}
+.checkbox-label {
+  padding: 5px 10px;
+  color: #000000b4;
+  margin-right: 2px !important;
+  margin-bottom: 0 !important;
+  text-align: center !important;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid gray; /* Change this color to your desired color */
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+  outline: none;
+}
+.checkbox-label input[type="checkbox"]:checked {
+  background-color: #419dfece; /* Change this color to your desired color */
+  border-color: #419dfece; /* Change this color to your desired color */
+  content: "✔"; /* Unicode character for checkmark */
+  font-size: 15px;
+  padding-left: 2px;
+  display: inline-block;
+  line-height: 1;
+}
+
+.checkbox-label input[type="checkbox"]:checked::before {
+  content: "✔"; /* Unicode character for checkmark */
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+  color: white; /* Change this color to your desired color */
+}
+.checkbox-button {
+  margin: 5px 5px;
+  flex-basis: 45%;
+}
+
+.continueBtn {
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+  font-weight: 600 !important;
+  min-height: 40px ;
+  padding: 0 25px !important;
+}
+.previousBtn {
+  background-color: #fff !important;
+  color: #007bff !important;
+  border-color: #007bff !important;
+  min-height: 40px ;
+  padding: 0 25px !important;
+}
+.inputStep3 {
+  margin-top: 0 !important;
+}
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone p {
+  margin: 0;
+}
+.form-check {
+  display: block;
+  min-height: 1rem;
+  font-size: 14px !important;
+  padding-left: 0 !important;
+  margin-bottom: 0.125rem;
+}
+.form-check .form-check-input {
+  float: left;
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+
