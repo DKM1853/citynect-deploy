@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/ui/User.js"],"names":["User","_jsx","children"],"mappings":"mHAAA,uBAUeA,UARF,WACX,OACEC,cAAA,OAAAC,SAAK,YAIT,C","file":"static/js/10.e73cd96e.chunk.js","sourcesContent":["import React from 'react'\n\nconst User = () => {\n  return (\n    <div>\n      hi there\n    </div>\n  )\n}\n\nexport default User\n"],"sourceRoot":""}
